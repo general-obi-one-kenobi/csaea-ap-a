@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class CrashCourse {
 
     public static void main(String[] args) {
@@ -87,6 +89,26 @@ public class CrashCourse {
 
        System.out.println("rows: " + arryGrid1.length);
        System.out.println("columns: " + arryGrid1[0].length);
+
+       int [][] arryGrid2 = { {7,8,9}, {4,5,6}, {1,2,3} };
+
+       System.out.println(arryGrid2[0][1]);
+       System.out.println(arryGrid2[2][2]);
+
+       //ARRAYLISTS
+       //can be any size and there are a lot of functions to work with
+       //avoid primitive data types, special classes for integer, double, etc.
+       ArrayList<String> arryList = new ArrayList<>();
+
+       arryList.add("Word 1");
+       arryList.add("Word 2");
+       arryList.add("Word 3");
+       arryList.remove(0);
+       arryList.add(0, "Word 4");
+       arryList.set(2,"Word 5");
+       System.out.println(arryList);
+       System.out.println(arryList.size());
+       System.out.println(arryList.get(2));
 
 
 
