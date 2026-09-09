@@ -106,9 +106,69 @@ public class CrashCourse {
        arryList.remove(0);
        arryList.add(0, "Word 4");
        arryList.set(2,"Word 5");
+
        System.out.println(arryList);
        System.out.println(arryList.size());
        System.out.println(arryList.get(2));
+
+       // Math class
+       Math.max(5,9);
+       Math.min(7,3);
+       Math.sqrt(14);
+       Math.abs(-67);
+
+       // CONDITIONALS
+
+       // if  else if  else
+
+        boolean tru = true;
+        boolean fal = false;
+
+        if(fal) {
+            System.out.println("Reached first condition");
+        } else if(fal) {
+            System.out.println("Reached second condition");
+        }
+        else {
+            System.out.println("Reached else");
+        }
+        // ITERATION
+
+        //while loop
+
+        int x = 5;
+
+        while(x < 10) {
+            System.out.println(x + " ");
+            x++;
+        }
+
+        // for loop
+        //initialize variable for an index; conditional; increment; decrement
+        for(int i = 0; i < 5; i++) {
+            System.out.println(i);
+        }
+
+        //enhanced for loop (only for reading values)
+        ArrayList<String> animals = new ArrayList<>();
+        animals.add("sheep");
+        animals.add("deer");
+        animals.add("moose");
+        System.out.println("ArrayList: " + animals);
+
+        for(String s: animals) {
+            System.out.println("We saw " + s);
+        }
+
+        double[] arry = {1.1, 2.2, 3.3, 4.4, 5.5};
+        System.out.println("Memory address: " + arry);
+
+        for(int i = 0; i < arry.length; i++) {
+            System.out.println(arry[i]);
+        }
+
+        int[][] arryMatrix = { {0, 32, 12}, {7, 33, 22} {6, 77, 100}};
+
 
 
 
