@@ -167,8 +167,15 @@ public class CrashCourse {
             System.out.println(arry[i]);
         }
 
-        int[][] arryMatrix = { {0, 32, 12}, {7, 33, 22} {6, 77, 100}};
+        int[][] arryMatrix = { {0, 32, 12}, {7, 33, 22}, {6, 77, 100} };
+        System.out.println(arryMatrix);
 
+        for(int row = 0; row < arryMatrix.length; row++) {
+            for(int col = 0; col < arryMatrix[row].length; col++) {
+                System.out.print(arryMatrix[row][col] + " ");
+            }
+            System.out.println();
+        }
 
 
 
