@@ -43,7 +43,7 @@ public class Song {
         }
     }
 
-        public void likeSong() {
+        public void dislikeSong() {
         dislikes += 1;
         dislikedByYou = true;
         if (likedByYou = true) {
