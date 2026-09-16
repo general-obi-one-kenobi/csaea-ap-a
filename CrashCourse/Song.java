@@ -54,10 +54,12 @@ public class Song {
 
     public void remix() {
         remixCount += 1;
+        System.out.println("Song remixed!");
     }
 
     public void share() {
         shareCount += 1;
+        System.out.println("Song shared!");
     }
 
     public void writeReview(String userReview) {
@@ -66,9 +68,17 @@ public class Song {
 
     public void reportSong() {
         reportCount += 1;
+        System.out.println("Song reported!");
         if (reportCount >= 10000) {
             isExplicit = true;
         }
+    }
+
+    public void viewInfo() {
+        System.out.println("Title: " + title);
+        System.out.println("Artist: " + artist);
+        System.out.println("Length: " + length + " minutes");
+        System.out.println("Number of Plays: " + numberOfPlays);
     }
 
 
