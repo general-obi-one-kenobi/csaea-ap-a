@@ -13,7 +13,7 @@ public class Song {
     private boolean likedByYou;
     private boolean dislikedByYou;
     private String review;
-    private int reportCount
+    private int reportCount;
 
     public Song(String title, String artist, double length) {
         this.title = title;
@@ -70,6 +70,8 @@ public class Song {
             isExplicit = true;
         }
     }
+
+
 
 
 
