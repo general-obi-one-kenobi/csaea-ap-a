@@ -1,4 +1,4 @@
-package CrashCourse;
+//package CrashCourse;
 
 public class Song {
     private String title;
@@ -69,7 +69,7 @@ public class Song {
     public void reportSong() {
         reportCount += 1;
         System.out.println("Song reported!");
-        if (reportCount >= 10000) {
+        if (reportCount >= 1) {
             isExplicit = true;
         }
     }
@@ -79,6 +79,11 @@ public class Song {
         System.out.println("Artist: " + artist);
         System.out.println("Length: " + length + " minutes");
         System.out.println("Number of Plays: " + numberOfPlays);
+        System.out.println("Explicit: " + isExplicit);
+        System.out.println("Number of Likes: " + likes);
+        System.out.println("Number of Dislikes: " + dislikes);
+        System.out.println("Number of Shares: " + shareCount);
+        System.out.println("Number of Remixes: " + remixCount);
     }
 
 
