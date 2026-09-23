@@ -10,8 +10,6 @@ public class Song {
     private boolean isExplicit;
     private int remixCount;
     private int shareCount;
-    private boolean likedByYou;
-    private boolean dislikedByYou;
     private int reportCount;
 
     public Song(String title, String artist, double length) {
@@ -35,20 +33,10 @@ public class Song {
 
     public void likeSong() {
         likes += 1;
-        likedByYou = true;
-        if (dislikedByYou = true) {
-            dislikes -= 1;
-            dislikedByYou = false;
-        }
     }
 
         public void dislikeSong() {
         dislikes += 1;
-        dislikedByYou = true;
-        if (likedByYou = true) {
-            likes -= 1;
-            likedByYou = false;
-        }
     }
 
     public void remix() {
