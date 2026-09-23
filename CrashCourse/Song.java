@@ -23,8 +23,6 @@ public class Song {
         isExplicit = false;
         remixCount = 0;
         shareCount = 0;
-        likedByYou = false;
-        dislikedByYou = false;
     }
 
     public void playSong() {
