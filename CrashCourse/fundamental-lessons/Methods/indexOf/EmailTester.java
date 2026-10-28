@@ -27,5 +27,7 @@ public class EmailTester {
         System.out.println(michael.getUser());
         System.out.println(jojo.getUser());
 
+        System.out.println(jojo.changeDomain(".gmail.com"));
+
     }
 }
