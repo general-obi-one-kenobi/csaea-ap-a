@@ -12,7 +12,9 @@ public class LegoStarWarsTester {
         System.out.println(set4.toString());
         System.out.println(set5.toString());
         System.out.println("Expected output: true Actual output: " + set1.compareNames(set4));
+        System.out.println("Expected output: false Actual output: " + set1.compareNames(set3));
         System.out.println("Expected output: false Actual output: " + set1.compareIdNumbers(set4));
+        System.out.println("Expected output: true Actual output:" + set1.compareIdNumbers(set5));
         System.out.println("Expected output: false Actual output: " + set1.comparePieceCounts(set4));
         System.out.println("Expected output: true Actual output: " + set1.comparePieceCounts(set5));
         System.out.println("Expected output: false Actual output: " + set1.comparePrice(set4));
