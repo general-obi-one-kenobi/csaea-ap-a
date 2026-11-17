@@ -61,27 +61,24 @@ public class NativeArrays {
             System.out.println(" enhanced value " + i);
         }
 
+
         // Challenge 1: Double It
         // Multiply every element by 2, then print the array.
         int[] challengeOne = {3, 7, 1, 9, 4};
         // TODO: your loop here
-        for (int i = 0; i < challengeOne.length; i++) {
 
-            challengeOne[i] = challengeOne[i] * 2;
+
+        // EXAMPLE: Modified for loop that prints only even elements
+        for (int i = 0; i < nums.length; i += 2) {
+
+                System.out.println(" index " + i + " -> value " + nums[i]);
+
         }
 
-        System.out.println(Arrays.toString(challengeOne));
-
-                 // Challenge 2: Every Other
+         // Challenge 2: Every Other
         // Use i += 2 to add 10 to only the elements at even indexes, then print.
         int[] challengeTwo = {3, 7, 1, 9, 4};
         // TODO: your loop here
-
-        for(int i = 0; i < challengeTwo.length; i += 2) {
-
-            challengeTwo[i] = challengeTwo[i] + 10;
-        }
-        System.out.println(Arrays.toString(challengeTwo));
 
         // Challenge 3: Replace Negatives
         // Change every negative number to 0, then print.
@@ -90,15 +87,53 @@ public class NativeArrays {
         // HINTS: use an if statement in each pass of the loop
         // redefine element value like this: nums[2] = 6;
 
-        for(int i = 0; i < temps.length; i++) {
+        // Challenge: Curve the Scores
+        int[] scorings = {85, 62, 97, 45, 70, 99};
+        // Add 5 to every score, but no score can go above 100. 
 
-            if (temps[i] < 1) {
-
-                temps[i] = 0;
-            }
+        for (int i = 0; i < scorings.length; i++) {
+                scorings[i] = Math.min(scorings[i] + 5, 100);
+                // if (scorings[i] > 100) {
+                //         scorings[i] = 100;
+                // }
         }
 
-        System.out.println(Arrays.toString(temps));
+        System.out.println(Arrays.toString(scorings));
+
+
+        // Challenge: Find the Highest
+        // int[] temps = {58, 71, 64, 80, 77, 69};
+        // Use a loop to find the highest temperature and the index it's at, then print both. Use Math.max()!
+
+        int highest = temps[0];
+        int highestIndex = 0;
+
+        for (int i = 1; i < temps.length; i++) {
+                // deals with value
+                highest = Math.max(highest, temps[i]);
+
+                // deals with the index
+                if (highest == temps[i]) {
+                        highestIndex = i;
+                }
+                
+        }
+
+        // Challenge: Random Fill
+        // int[] nums = new int[10];
+        // Loop 10 times. Each time, use Math.random() to get a random number from 1 to 100 and a random index from 0 to 9, then put the number at that index. Print the array. 
+        // Then answer: why are some spots still 0?
+
+
+        // Commit your code. 
+        // Submit it to Google Classroom Arrays assignment
+        // Paste the URL for the Arrays folder only:
+        
+        //ap-a-java/fundamental-lessons/Arrays/
+
+
+
+
 
         }
 }
