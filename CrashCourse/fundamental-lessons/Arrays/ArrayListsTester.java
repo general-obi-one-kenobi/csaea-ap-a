@@ -14,5 +14,7 @@ public class ArrayListsTester {
         int index = ArrayLists.findIndex(animals, "blobfish");
         System.out.println(index);
 
+        ArrayLists.modifyAnimals(animals);
+
     }
 }
