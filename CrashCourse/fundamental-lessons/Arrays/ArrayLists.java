@@ -115,6 +115,8 @@ public class ArrayLists {
      * Example: [3, 7, 1, 9, 4]  ->  3   (the 9 is at index 3)
      * Tools:   for loop with index i, size(), get(i), a variable to remember the best index
      * */
+
+    // An enhanced for loop gives you values, not indices.
     
 
 }
