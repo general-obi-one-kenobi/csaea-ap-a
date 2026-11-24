@@ -185,23 +185,67 @@ public class ArrayLists {
      *
   */
 
-         /* ===== CHECKPOINT 4: Putting It All Together =====
+    /* ===== CHECKPOINT 4: Putting It All Together =====
      * CHALLENGE:
      * Write longNames(ArrayList<String> animals) that RETURNS A NEW list of every name longer
      * than the average name length. Along the way, print the longest name and whether
      * "glass frog" is in the list. Use ONLY enhanced for loops.
-     * (Why can't you just remove the short names inside an enhanced for loop?)
+
      * Example: [cat, pangolin, emu, glass frog]  ->  average 6.0, returns [pangolin, glass frog]
      *          prints  Longest: glass frog   Has glass frog: true
+     * 
      * Tools:   enhanced for, accumulator, min/max tracking, boolean flag, .equals(),
      *          (double) cast, building a new list with add(obj)
-     * Steps:   set up total = 0, longest = list.get(0), and hasFrog = false,
-     *          loop once to add each length to total, update longest, and flag "glass frog",
-     *          compute avg as a double AFTER the loop, make an empty result list,
-     *          loop a second time and add each name longer than avg, print longest and hasFrog,
-     *          return result
-     * Hint:    you need TWO loops -- you can't compare to the average until you've seen every name
+     * 
+    * Steps:   X 1. Set up total = 0, longest = animals.get(0), hasFrog = false
+    *          2. Loop #1 over every name:
+    *               X a. add its length to total 
+    *               X b. if it's longer than longest, update longest
+    *               X c. if it .equals("glass frog"), set hasFrog = true
+    *          3. X AFTER the loop, compute avg = (double) total / animals.size()
+    *          4. X Make an empty ArrayList<String> called result
+    *          5. X Loop #2 over every name: if its length > avg, add it to result
+    *          6. Print "Longest: " + longest and "Has glass frog: " + hasFrog
+    *          7. Return result
+     * 
      *
 */
+
+public static ArrayList<String> longNames(ArrayList<String> animals) {
+
+        int total = 0;
+        String longest = animals.get(0);
+        boolean hasFrog = false;
+
+        for (String name : animals) {
+
+            total += name.length();
+
+            if (name.length() > longest.length()) {
+                longest = name;
+            }
+
+            if (name.equals("glass frog")) {
+                hasFrog = true;
+            }
+        }
+
+        double avg = (double) total / animals.size();
+
+        ArrayList<String> result = new ArrayList<>();
+
+        for (String name : animals) {
+            if (name.length() > avg) {
+                result.add(name);
+            }
+        }
+
+        System.out.println("longest:" + longest);
+        System.out.println("Has glass frog?" + hasFrog);
+
+        return result;
+
+}
+
 
 }
